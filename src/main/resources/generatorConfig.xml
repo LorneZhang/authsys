@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE generatorConfiguration
+    PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+    "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+  <generatorConfiguration>
+      <!--数据库驱动-->
+      <classPathEntry location="D:/Deve/maven/repository/mysql/mysql-connector-java/5.1.38/mysql-connector-java-5.1.38.jar"/>
+      <context id="my" targetRuntime="MyBatis3">
+          <commentGenerator>
+             <property name="suppressDate" value="true"/>
+             <property name="suppressAllComments" value="true"/>
+         </commentGenerator>
+         <!--数据库链接地址账号密码-->
+         <jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+         	connectionURL="jdbc:mysql://116.213.142.87:3306/guoren_com" userId="root" password="time.9818">
+         </jdbcConnection>
+         <javaTypeResolver>
+             <property name="forceBigDecimals" value="false"/>
+         </javaTypeResolver>
+         <!--生成Model类存放位置-->
+         <javaModelGenerator targetPackage="com.gop.domain" targetProject="src\main\java">
+             <property name="enableSubPackages" value="true"/>
+             <property name="trimStrings" value="true"/>
+         </javaModelGenerator>
+         <!--生成映射文件存放位置-->
+         <sqlMapGenerator targetPackage="com.gop.mapper" targetProject="src\main\java">
+             <property name="enableSubPackages" value="true"/>
+         </sqlMapGenerator>
+         <!--生成Dao类存放位置-->
+         <javaClientGenerator type="XMLMAPPER" targetPackage="com.gop.mapper" targetProject="src\main\java">
+             <property name="enableSubPackages" value="true"/>
+         </javaClientGenerator>
+         <!--生成对应表及类名-->
+         <!-- <table tableName="api_secret" domainObjectName="ApiSecret" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		 <table tableName="cms_news" domainObjectName="CmsNews" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		 <table tableName="order_gop" domainObjectName="OrderGop" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		 <table tableName="transfer_cny" domainObjectName="TransferCny" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		 <table tableName="transfer_gop" domainObjectName="TransferGop" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		 <table tableName="user_ac_bank" domainObjectName="UserAcBank" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		 <table tableName="user_finance" domainObjectName="UserFinance" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		 <table tableName="user_question" domainObjectName="UserQuestion" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		 <table tableName="user_info" domainObjectName="UserInfo" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		 <table tableName="lock_paypwd" domainObjectName="LockPaypwd" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table> 
+		 <table tableName="trade_gop" domainObjectName="TradeGop" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		 <table tableName="bills" domainObjectName="Bills" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+		 <table tableName="address" domainObjectName="Address" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table> --> 
+		 
+		 <table tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+     </context>
+ </generatorConfiguration>
